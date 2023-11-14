@@ -4,7 +4,7 @@ class ListDetailUserService{
   async execute(user_id: string){
 
     if (!user_id) {
-      throw new Error("Invalid user");
+      throw new Error("Usuario invalido");
     }
 
     const user = await prismaClient.user.findFirst({
@@ -22,7 +22,7 @@ class ListDetailUserService{
     })
 
     if(user === null){
-      throw new Error("User not found")
+      throw new Error("Usuario não encontrado")
     }
 
     return user;

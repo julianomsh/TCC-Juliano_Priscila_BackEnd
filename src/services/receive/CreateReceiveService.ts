@@ -16,7 +16,7 @@ class CreateReceiveService {
   async execute({ description, type, value, date, user_id, maturity, account_type, status, observation }: ReceiveRequest) {
 
     if (!user_id) {
-      throw new Error("Invalid user");
+      throw new Error("Usuario invalido");
     }
 
     const findUser = await prismaClient.user.findFirst({

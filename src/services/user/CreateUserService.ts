@@ -22,7 +22,7 @@ class CreateUserService{
 
 
     if (userAlreadyExists) {
-      throw new Error("User already exists");
+      throw new Error("Usuario ja cadastrado.");
     }
     
     const passwordHash = await hash(password, 8);

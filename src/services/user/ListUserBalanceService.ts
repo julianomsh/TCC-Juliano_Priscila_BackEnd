@@ -18,7 +18,7 @@ class ListUserBalanceService{
   async execute({ user_id, date }: UserRequest){
 
     if (!user_id) {
-      throw new Error("Invalid user");
+      throw new Error("Usuario Invalido");
     }
 
     const dashboard = [];

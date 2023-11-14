@@ -29,7 +29,7 @@ model Receive {
   value         Float
   type          String
   date          String
-  maturity String
+  maturity      String
   account_type  String
   status        String
   observation   String
